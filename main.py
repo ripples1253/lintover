@@ -1,6 +1,8 @@
 import asyncio
 import time
 import uvloop
+import random
+import string
 
 from pathlib import Path
 
@@ -192,8 +194,9 @@ async def main():
     async def send_code(client: Client, request: CoreMessage, session_id: int):
         from binascii import crc32
 
-        code = 69696
-        code = str(code).encode()
+        code = ''.join(random.choice(string.digits) for i in range(5))
+        print(f'Someone\'s signing up! Here\'s their code: {code}')
+        code = code.encode()
 
         return {
             "_": "auth.sentCode",
