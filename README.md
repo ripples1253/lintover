@@ -1,6 +1,5 @@
-# piltover 🐳
-An experimental Telegram server written from scratch in Python.
-Development chat: linked group to [@ChameleonGram](https://t.me/ChameleonGram).
+# lintover 🐳
+MTProto implementation for Candy, hopefully i can get this to work. If not, oh well. Will keep in touch with progress of Piltover and merge new commits.
 
 ## TODO
 - [ ] WebK gets stuck on `sendCode()`
