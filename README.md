@@ -3,8 +3,6 @@ MTProto implementation for Candy, hopefully i can get this to work. If not, oh w
 
 ## TODO
 - [ ] WebK gets stuck on `sendCode()`
-- [x] Multiple sessions handling for: ~~Give correct `msg_id`/`seq_no` according to the [Telegram specification](https://core.telegram.org/mtproto/description#message-identifier-msg-id)~~
-- [x] ~~A Websocket proxy for Telegram Web (WebZ / WebK). A work in progress temporary implementation is in `tools/websocket_proxy.js`~~
 - [ ] Updates handling: `pts` / `qts` / etc...
 - [ ] Refactor the TL de/serialization module, the code is messy (e.g. make custom boxed types for List/int/str/bytes)
 - [ ] Refactor the server `authorize()` method
@@ -17,7 +15,6 @@ MTProto implementation for Candy, hopefully i can get this to work. If not, oh w
 - [ ] MTProxy support maybe? Obfuscation is already implemented, so why not
 - [ ] HTTP/UDP support? Probably Telegram itself forgot those exist
 - [ ] Switch to hypercorn for the tcp server maybe?
-- [ ] Improve README
 
 # Purpose
 This project is currently not meant to be used to host custom Telegram instances, as most **security measures are <ins>currently</ins> barely in place**. For now, it can be used by MTProto clients developers to understand why their code fails, whereas Telegram just closes the connection with a -404 code.
